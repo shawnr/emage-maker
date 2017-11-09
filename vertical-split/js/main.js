@@ -60,7 +60,7 @@ class ImageMaker {
     }
     downloadImage(){
         this.drawPreview();
-        generateImage("image-preview", "800px", "1280px");
+        generateImage();
     }
 }
 

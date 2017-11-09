@@ -3,29 +3,11 @@ class ImageMaker {
         // When this class is instantiated, the `constructor()` method is executed.
         this.imagePreview = document.getElementById('image-preview');
 
-        // Create Top Text
-        this.topText = document.createElement('p');
-        this.topText.setAttribute('class', 'top-text');
-
-        this.imagePreview.appendChild(this.topText);
-
-        // Create Top Text Citation
-        this.topLink = document.createElement('p');
-        this.topLink.setAttribute('class', 'top-link');
-
-        this.imagePreview.appendChild(this.topLink);
-
         // Create Top Image
         this.topImage = document.createElement('div');
         this.topImage.setAttribute('class', 'top-image');
 
         this.imagePreview.appendChild(this.topImage);
-
-        // Create Bottom Image
-        this.bottomImage = document.createElement('div');
-        this.bottomImage.setAttribute('class', 'bottom-image');
-
-        this.imagePreview.appendChild(this.bottomImage);
 
         // Create Bottom Text Citation
         this.bottomLink = document.createElement('p');
@@ -56,9 +38,6 @@ class ImageMaker {
 
         // Grab Form Inputs
 
-        this.topTextInput = document.querySelector('textarea[name="topText"]');
-        this.topTextSizeInput = document.querySelector('input[name="topTextSize"]');
-        this.topLinkInput = document.querySelector('input[name="topLink"]');
         this.topImageInput = document.querySelector('input[name="topImage"]');
         this.topTextSizeInput = document.querySelector('input[name="topTextSize"]');
         this.topLinkInput = document.querySelector('input[name="topLink"]');
@@ -66,21 +45,12 @@ class ImageMaker {
         this.bottomTextInput = document.querySelector('textarea[name="bottomText"]');
         this.bottomLinkInput = document.querySelector('input[name="bottomLink"]');
         this.bottomTextSizeInput = document.querySelector('input[name="bottomTextSize"]');
-        this.bottomImageInput = document.querySelector('input[name="bottomImage"]');
-        this.bottomTextSizeInput = document.querySelector('input[name="bottomTextSize"]');
-        this.bottomLinkInput = document.querySelector('input[name="bottomLink"]');
 
 
     }
     drawPreview(){
 
         this.topImage.style.backgroundImage = `url(http://rashrewind.com/proxy.php?csurl=${this.topImageInput.value})`;
-
-        this.bottomImage.style.backgroundImage = `url(http://rashrewind.com/proxy.php?csurl=${this.bottomImageInput.value})`;
-
-        this.topText.innerHTML = this.topTextInput.value.replace(/(?:\r\n|\r|\n)/g, '<br />');
-        this.topText.style.fontSize = `${this.topTextSizeInput.value}px`;
-        this.topLink.innerHTML = this.topLinkInput.value;
 
         this.bottomText.innerHTML = this.bottomTextInput.value.replace(/(?:\r\n|\r|\n)/g, '<br />');
         this.bottomText.style.fontSize = `${this.bottomTextSizeInput.value}px`;
@@ -90,7 +60,7 @@ class ImageMaker {
     }
     downloadImage(){
         this.drawPreview();
-        generateImage();
+        generateImage("image-preview", "1280px", "1280px");
     }
 }
 
