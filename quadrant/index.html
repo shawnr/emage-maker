@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Emily's Image Maker</title>
+  <meta name="description" content="Emily's Image Maker">
+  <meta name="author" content="La Résistance">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/dom-to-image.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <div id="form-container">
+    <h1>Image Maker</h1>
+    <p>Choose your settings to generate an image.</p>
+    <form>
+      <p>
+        <label for="topText">Top Text</label><br>
+        <textarea name="topText" placeholder="Text for top of image." cols="40" rows="8"></textarea>
+      </p>
+      <p>
+        <label for="topTextSize">Top Text Size</label>
+        <input name="topTextSize" value="24">
+      </p>
+      <p>
+        <label for="topImage">Top Image</label>
+        <input name="topImage" placeholder="URL to top image" value="">
+      </p>
+      <p>
+        <label for="topLink">Top Source Link</label>
+        <input name="topLink" placeholder="Source link for top of image." value="">
+      </p>
+      <p>
+        <label for="bottomText">Bottom Text</label><br>
+        <textarea name="bottomText" placeholder="Text for bottom of image." cols="40" rows="8"></textarea>
+      </p>
+      <p>
+        <label for="bottomTextSize">Bottom Text Size</label>
+        <input name="bottomTextSize" value="24">
+      </p>
+      <p>
+        <label for="bottomImage">Bottom Image</label>
+        <input name="bottomImage" placeholder="URL to bottom image" value="">
+      </p>
+      <p>
+        <label for="bottomLink">Bottom Source Link</label>
+        <input name="bottomLink" placeholder="Source link for bottom of image." value="">
+      </p>
+      <p><input type="submit" value="Download Image"></p>
+    </form>
+    <div class="directions">
+      <h2>Directions</h2>
+      <p>This tool can be used to make new images. Add the desired text for top and bottom, and add the URL for the corresponding images. The text size can be adjusted so no text is cut off (the system will cut off any text that overflows the bounds of the text boxes).</p>
+      <p>If links are omitted, they will not show up in the final image at all. Links should be shortened using a service (like <a href="https://bitly.com">Bitly</a>) to improve their appearance in the final image, but it is not required.</p>
+      <p>To highlight words yellow, wrap them with &lt;span&gt; tags like this:</p>
+      <pre>text text &lt;span&gt;some words here&lt;/span&gt; text text</pre>
+      <p>Other simple HTML tags can also be used for formatting. Line breaks will be preserved in the output, too.</p>
+    </div>
+  </div>
+
+  <div id="image-preview">
+    <!-- Image Content Goes Here -->
+  </div>
+</body>
+</html>

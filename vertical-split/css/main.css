@@ -12,33 +12,12 @@
     position: relative;
     padding: 0.5rem;
 }
-.top-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 620px;
-    height: 300px;
-    overflow: hidden;
-    padding: 1rem;
-    font-weight: 400;
-}
-.top-text span {
-    color: yellow;
-}
-.top-link {
-    position: absolute;
-    left: 10px;
-    top: 380px;
-    font-size: 12px;
-    color: yellow;
-    z-index: 100;
-}
 .bottom-text {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 100px;
+    left: 20px;
     width: 620px;
-    height: 300px;
+    height: 800px;
     overflow: hidden;
     padding: 1rem;
     font-weight: 400;
@@ -48,8 +27,8 @@
 }
 .bottom-link {
     position: absolute;
-    right: 10px;
-    bottom: 380px;
+    left: 20px;
+    bottom: 30px;
     font-size: 12px;
     color: yellow;
     z-index: 110;
@@ -58,19 +37,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 620px;
-    height: 400px;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: none;
-    background-position: center center;
-}
-.bottom-image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 620px;
-    height: 400px;
+    width: 640px;
+    height: 800px;
     overflow: hidden;
     background-size: cover;
     background-repeat: none;
@@ -85,8 +53,8 @@
     font-weight: 900;
     font-style: italic;
     position: absolute;
-    top: 370px;
-    left: 400px;
+    top: 0px;
+    left: 0px;
     z-index: 1000;
     width: 400px;
     margin: auto auto;
